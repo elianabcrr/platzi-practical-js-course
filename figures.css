@@ -1,0 +1,92 @@
+body{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 70px;
+    background-image: url(./geometric.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+header h1{
+    font-size: 54px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+header span{
+    color: #d9d9d9;
+    font-size: 23px;
+}
+.container-figures{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+.container-figures section {
+    background-color: #ffffff47;
+    backdrop-filter: blur(38px);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.container-figures section h2{
+    margin-top: 0;
+    text-transform: uppercase;
+}
+.container-figures section h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.container-figures section form {
+    margin-top: 10px;
+}
+.sectionLI{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.container-figures section label {
+    font-size: 16px;
+    width: 70%;
+    text-align: left;
+    padding-right: 15px;
+    align-items: flex-start;
+}
+.container-figures section input{
+    width: 30%;
+    height: 30px;
+    margin: 0px 0 15px 0;
+    border-radius: 5px;
+    border: none;
+}
+.section-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container-figures section .button{
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    width: 46%;
+}
+button#buttonPerimeter {
+    color: white;
+    background: #977d00;
+    margin-bottom: 10px;
+}
+button#buttonArea{
+    color: white;
+    background: #0008ff;
+}

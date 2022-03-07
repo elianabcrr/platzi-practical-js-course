@@ -1,23 +1,75 @@
 // Square
 
 function perimeterSquare( sideSquare, unit ){
-    return "The square perimeter is: " + (sideSquare*4) + unit;
+    return  (sideSquare*4) + unit;
 }
 
 function areaSquare( sideSquare, unit ){
-    return "The squeare area is: " +(sideSquare * sideSquare) + unit+"^2";
+    return (sideSquare * sideSquare) + unit+"^2";
+}
+function calculatePerimeterSquare(){
+    const input = document.getElementById("inputSideSquare");
+    const inputValue = input.value;
+
+    if(inputValue != ''){
+        const perimeter = perimeterSquare(inputValue, "cm");
+        alert("El perímetro del cuadrado es: "+perimeter);
+        
+    }else{
+        alert("No has ingresado cuánto mide cada lado de tu cuadrado");
+    }
+}
+function calculateAreaSquare(){
+    const input = document.getElementById("inputSideSquare");
+    const inputValue = input.value;
+    
+    if(inputValue != ''){
+        const area = areaSquare(inputValue, "cm");
+        alert("El área del cuadrado es: "+area);
+        
+    }else{
+        alert("No has ingresado cuánto mide cada lado de tu cuadrado");
+    }
 }
 
 // triangle
 
+
 function perimeterTriangle(sideTriangle1, sideTriangle2, baseTriangle, unit){
-    return "The triangle perimeter is: "+ (sideTriangle1 + sideTriangle2 + baseTriangle) + unit;
+    return (sideTriangle1 + sideTriangle2 + baseTriangle) + unit;
 }
 
 function areaTriangle(heightTriangle, baseTriangle, unit){
-    return "The triangle area is: "+ ((heightTriangle* baseTriangle)/2) + unit+"^2";
+    return ((heightTriangle* baseTriangle)/2) + unit+"^2";
 }
 
+function calculatePerimeterTriangle(){
+
+    const input1 = parseInt(document.getElementById("inputSideTriangle1").value);
+    const input2 = parseInt(document.getElementById("inputSideTriangle2").value);
+    const input3 = parseInt(document.getElementById("inputBaseTriangle").value);
+
+    if(input1 != '' && input2 != '' && input3 != ''){
+        const perimeter = perimeterTriangle(input1, input2, input3, "cm");
+        alert("El perímetro del triángulo es: "+perimeter);
+        
+    }else{
+        alert("No has ingresado cuánto mide los lados del triángulo");
+    }
+}
+function calculateAreaTriangle(){
+
+    const input1 = document.getElementById("inputBaseTriangle").value;
+    const input2 = document.getElementById("inputHeightTriangle").value;
+
+    if(input1 != '' && input2 != '' ){
+        const area = areaTriangle(input1, input2, "cm");
+        alert("El área del triángulo es: "+area);
+        
+    }else{
+        alert("No has ingresado cuánto mide los lados del triángulo");
+    }
+}
 // // circle
 
 const pi = Math.PI;
@@ -27,10 +79,32 @@ function diameterCircle(radiusCircle){
 
 function perimeterCircle( radiusCircle, unit){
     const diameter = diameterCircle(radiusCircle);
-    return "The circle perimeter is: "+ (diameter*pi) + unit;
+    return  (diameter*pi) + unit;
 }
 
 function areaCircle(radiusCircle, unit){
-    return "The circle area is: "+ ((radiusCircle * radiusCircle) * pi) + unit+"^2";
+    return  ((radiusCircle * radiusCircle) * pi) + unit+"^2";
+}
+
+function calculatePerimeterCircle(){
+    const input1 = document.getElementById("inputRadiusCircle").value;
+
+    if(input1 != ''  ){
+        const perimeter = perimeterCircle(input1, "cm");
+        alert("El perímetro del círculo es: "+perimeter);
+        
+    }else{
+        alert("No has ingresado cuánto mide los lados del circulo");
+    }
+}
+function calculateAreaCircle() {
+    const input1 = document.getElementById("inputRadiusCircle").value;
+    if(input1 != ''  ){
+        const area = areaCircle(input1, "cm");
+        alert("El área del círculo es: "+area);
+        
+    }else{
+        alert("No has ingresado cuánto mide los lados del circulo");
+    }
 }
 

@@ -9,8 +9,69 @@
     <link rel="stylesheet" href="./figures.css">
 </head>
 <body>
-    <div class="container-figures">
+    <header>
         <h1>Geometric figures</h1>
+        <span>First workshop of the practical js course</span>
+    </header>
+    <div class="container-figures">
+        <section class="square">
+            <h2>Cuadrado</h2>
+            <h3>Cálculo del área y perímetro</h3>
+            <form action="">
+                <div class="sectionLI">
+                    <label for="">Cuánto mide cada lado de tu cuadrado?</label>
+                    <input type="number" id="inputSideSquare">
+                </div>
+                
+                <div class="section-buttons">
+                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterSquare()">Calcular el perímetro</button>
+                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaSquare()">Calcular el área</button>
+                </div>
+            </form>
+           
+        </section>
+        <section class="triangle">
+            <h2>Triángulo</h2>
+            <h3>Cálculo del área y perímetro</h3>
+            <form action="">
+                <div class="sectionLI">
+                    <label for="">Cuánto mide lado1 del triángulo?</label>
+                    <input type="number" id="inputSideTriangle1">
+                </div>
+                <div class="sectionLI">
+                    <label for="">Cuánto mide lado2 del triángulo?</label>
+                    <input type="number" id="inputSideTriangle2">
+                </div>
+                <div class="sectionLI">
+                    <label for="">Cuánto mide la base del triángulo?</label>
+                    <input type="number" id="inputBaseTriangle">
+                </div>
+                <div class="sectionLI">
+                    <label for="">Cuánto es la altura del triángulo?</label>
+                    <input type="number" id="inputHeightTriangle">
+                </div>
+                
+                <div class="section-buttons">
+                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterTriangle()">Calcular el perímetro</button>
+                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaTriangle()">Calcular el área</button>
+                </div>
+            </form>
+        </section>
+        <section class="circle">
+            <h2>Círculo</h2>
+            <h3>Cálculo del área y perímetro</h3>
+            <form action="">
+                <div class="sectionLI">
+                    <label for="">Cuánto mide el radio del Círculo?</label>
+                    <input type="number" id="inputRadiusCircle">
+                </div>
+                <div class="section-buttons">
+                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterCircle()">Calcular el perímetro</button>
+                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaCircle()">Calcular el área</button>
+                </div>
+            </form>
+        </section>
+
     </div>
     
 
