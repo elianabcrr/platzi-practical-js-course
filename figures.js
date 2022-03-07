@@ -108,3 +108,33 @@ function calculateAreaCircle() {
     }
 }
 
+//isosel triangle 
+function triangleIsosel(sideTriangle1, sideTriangle2, baseTriangle){
+    console.log();
+    if(sideTriangle1 == sideTriangle2){
+        return true;
+    }else if(sideTriangle1 == baseTriangle){
+        return true;
+    }else if(baseTriangle == sideTriangle2){
+        return true;
+    }else{
+        return false;
+    }
+}
+function heightTriangle(sideTriangle1, sideTriangle2, baseTriangle, unit){
+
+    const answer = Math.sqrt((sideTriangle1*sideTriangle1) - ((baseTriangle * baseTriangle)/4));
+    return answer+ unit+"^2";
+}
+function calculateHeightTriangle(){
+    const input1 = parseInt(document.getElementById("inputTriangleIsos1").value);
+    const input2 = parseInt(document.getElementById("inputTriangleIsos2").value);
+    const input3 = parseInt(document.getElementById("inputBaseTriangleIsos").value);
+
+    if(triangleIsosel(input1, input2, input3)){
+        const heTriangle = heightTriangle(input1, input2, input3, "cm");
+        alert(heTriangle);
+    }else{
+        alert("no es un triángulo isóscele, ya que dos de sus lados debe ser iguales");
+    }
+}
