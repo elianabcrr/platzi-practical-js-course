@@ -33,22 +33,21 @@ function calculatePriceDiscount(){
 
 function calculatePriceDiscountCoupon(){
 
-    let banCouponDiscount = -1;
     let couponDiscount = document.getElementById("inputCodeCoupon").value;
     const inputPrice = document.getElementById("inputPrice2").value;
     
-    if(couponDiscount != ''){
-        banCouponDiscount = coupon(couponDiscount);
-    }
-    
-    if(banCouponDiscount> 0 && inputPrice!= ''){
-        console.log("entra");
-        const percentagePriceDiscount = 100 - banCouponDiscount;
+   
+    let banCouponDiscount = coupon(couponDiscount);
+ 
+    if(banCouponDiscount!= undefined && couponDiscount!= '' && inputPrice!= ''){
+
+        const discount = banCouponDiscount["percentage"];
+        const percentagePriceDiscount = 100 -  discount;
         const priceDiscount = (inputPrice * percentagePriceDiscount) / 100;
         let resultsPriceCoupon = document.getElementById("resultsPriceCoupon");
         resultsPriceCoupon.innerText= "El precio con descuento es: $"+priceDiscount;
 
-    }else if(banCouponDiscount==0 && inputPrice!= ''){
+    }else if(banCouponDiscount==undefined && couponDiscount!= '' && inputPrice!= ''){
         alert("El cupón introducido es incorrecto");
 
     } else{
@@ -72,17 +71,10 @@ function coupon(couponCode){
     ];
     let result = 0;
 
-        for( let coupon of arrayCoupon){
-           
-            if(coupon["code"] === couponCode){
+        result = arrayCoupon.find( (couponC) =>
+            couponC.code === couponCode
+        );
 
-                result= coupon["percentage"];
-                break;
-            }else  {
-                result= 0;
-                
-            }
-        }
     return result;
 }
 
