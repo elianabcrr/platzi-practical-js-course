@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precios y descuentos | Curso práctico de JS</title>
-    <link rel="stylesheet" href="discounts.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/discounts.css">
 </head>
 <body>
-    
     <main>
         <section class="title">
+            <a href="index.html" class="backward"><i class="fa-solid fa-backward"></i></a>
             <h1>Porcentajes y descuentos</h1>
+            <span>Segundo taller del curso práctico de js</span>
         </section>
         <section class="options-discounts">
             <div class="price-discounts">
@@ -26,7 +29,7 @@
                         <input type="number" name="" id="inputDiscount">
                     </div>
                     <div class="buttons">
-                        <button type="button" onclick="calculatePriceDiscount()">Calcular precio</button>
+                        <button type="button" class="button-percentaje" onclick="calculatePriceDiscount()">Calcular precio</button>
                     </div>
                 </form>
                 <p id="resultsPrice"></p>
@@ -46,7 +49,7 @@
                     </div>
                 
                     <div class="buttons">
-                        <button type="button" onclick="calculatePriceDiscountCoupon()">Calcular precio</button>
+                        <button type="button" class="button-coupon" onclick="calculatePriceDiscountCoupon()">Calcular precio</button>
                     </div>
                 </form>
                 <p id="resultsPriceCoupon"></p>
@@ -54,6 +57,6 @@
         </section>
     </main>
 
-    <script src="discounts.js"></script>
+    <script src="js/discounts.js"></script>
 </body>
 </html>

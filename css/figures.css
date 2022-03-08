@@ -1,3 +1,15 @@
+
+:root{
+    --white : #FFFFFF;
+    --black : #000000;
+    --terracotta: #94342B;
+    --terracotta-light: #D58A6E;
+    --dark: #232830;
+    --text-input-field: #f7f7f7;
+}
+*{
+    font-family: cursive;
+}
 body{
     display: grid;
     place-content: center;
@@ -5,8 +17,7 @@ body{
     height: 100%;
     box-sizing: border-box;
     margin: 0;
-    padding: 70px;
-    background-image: url(./geometric.jpg);
+    background-image: url(../img/geometric.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,26 +27,40 @@ header{
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: relative;
+    padding: 40px;
+}
+.backward{
+    width: auto;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: #fefefe;
 }
 header h1{
-    font-size: 54px;
+    font-size: 34px;
     color: white;
     text-transform: uppercase;
     margin-bottom: 5px;
+    margin-top: 0px;
 }
 header span{
     color: #d9d9d9;
-    font-size: 23px;
+    font-size: 16px;
 }
 .container-figures{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-gap: 50px;
     text-align: center;
+    width: 1024px;
+    padding-bottom: 40px
+}
+.container-figures section:nth-child(2), .container-figures section:nth-child(3) {
+    grid-row: span 2;
 }
 .container-figures section {
-    background-color: #ffffff47;
+    background-color: #00000047;
     backdrop-filter: blur(8px);
     padding: 20px 40px;
     border-radius: 10px;
@@ -43,7 +68,8 @@ header span{
 .container-figures section h2{
     margin-top: 0;
     text-transform: uppercase;
-    color: #ffb000;
+    color: var(--terracotta-light);
+    font-size: 20px;
 }
 .container-figures section h3 {
     font-size: 18px;
@@ -59,14 +85,14 @@ header span{
     justify-content: space-between;
 }
 .container-figures section label {
-    font-size: 16px;
-    width: 46%;
+    font-size: 14px;
+    width: 80%;
     text-align: left;
     align-items: flex-start;
     color: #f8f8f8;
 }
 .container-figures section input{
-    width: 46%;
+    width: 20%;
     height: 30px;
     margin: 0px 0 15px 0;
     border-radius: 5px;
@@ -77,6 +103,9 @@ header span{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 6px;
+    border-top: 1px solid #afafaf;
+    padding-top: 14px;
 }
 .container-figures section .button{
     height: 50px;
@@ -85,15 +114,16 @@ header span{
     width: 46%;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 5.5px;
 }
 button#buttonPerimeter {
-    color: #000;
-    background-color: #ffb000;
+    color: rgb(255, 255, 255);
+    background-color: var(--terracotta);
     margin-bottom: 10px;
 }
 button#buttonArea{
-    background-color: #000;
-    color: #ffb000;
+    background-color: var(--terracotta-light);
+    color: #000;
 }
 @media(max-width:767px){
     body{

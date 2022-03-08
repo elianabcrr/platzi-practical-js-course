@@ -1,0 +1,140 @@
+:root{
+    --white : #FFFFFF;
+    --black : #000000;
+    --terracotta: #94342B;
+    --terracotta-light: #D58A6E;
+    --dark: #232830;
+    --text-input-field: #f7f7f7;
+}
+*{
+    font-family: cursive;
+}
+.backward {
+    width: auto;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: #fefefe;
+}
+body{
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: flex-start center;
+    box-sizing: border-box;
+    margin: 0;
+    background-image: url(../img/price.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+main{
+    margin: 0;
+    padding: 0;
+}
+main h1{
+    font-size: 31px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    color: #ffff;
+}
+main h2{
+    margin-top: 0;
+    text-transform: uppercase;
+    color: var(--terracotta-light);
+    font-size: 20px;
+}
+section.title span {
+    color: #d9d9d9;
+    font-size: 16px;
+}
+section.title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 40px;
+}
+section.options-discounts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    text-align: center;
+    width: 1024px;
+    padding-bottom: 40px;
+}
+.price-discounts {
+    box-sizing: border-box;
+    background-color: #00000047;
+    backdrop-filter: blur(8px);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.section-input{
+    width: 84%;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 auto 20px auto;
+}
+.section-input label{
+    font-size: 14px;
+    width: 80%;
+    color: #f8f8f8;
+}
+.section-input  input{
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding: 0 19px;
+    box-sizing: border-box;
+}
+.buttons{
+    margin-top: 6px;
+    border-top: 1px solid #afafaf;
+    padding-top: 14px;
+}
+button{
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    width: 46%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+.button-percentaje, .button-coupon:hover{
+    color: rgb(255, 255, 255);
+    background-color: var(--terracotta);
+}
+.button-percentaje:hover, .button-coupon{
+    background-color: var(--terracotta-light);
+    color: #000;
+}
+#resultsPrice, #resultsPriceCoupon{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+@media(max-width:767px){
+    body{
+        padding: 30px;
+        height: 100%;
+        min-height: 100vh
+    }
+    main{
+        padding: 20px;
+    }
+    button, .section-input{
+        width: 100%;
+    }
+    section.options-discounts{
+        grid-template-columns: 1fr;
+    }
+    
+}

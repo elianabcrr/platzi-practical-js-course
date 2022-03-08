@@ -1,0 +1,89 @@
+:root{
+    --white : #FFFFFF;
+    --black : #000000;
+    --terracotta: #94342B;
+    --terracotta-light: #D58A6E;
+    --dark: #232830;
+    --text-input-field: #f7f7f7;
+}
+*{
+    font-family: cursive;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/background-.jpg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+header {
+    padding: 40px;
+    text-align: center;
+}
+header h1 {
+    font-size: 34px;
+    text-transform: uppercase;
+}
+header p {
+    font-size: 16px;
+}
+.card-sections{
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1024px;
+}
+.btn-primary, .btn-primary:focus{
+    color: #fff;
+    background-color: var(--terracotta);
+    border-color: var(--terracotta);
+    text-transform: uppercase;
+    width: 120px;
+    font-weight: 700;
+    letter-spacing: 5.5px;
+    height: 36px;
+}
+.btn-primary:hover, .btn-primary:active{
+    color: #fff;
+    background-color: var(--terracotta-light);
+    border-color: var(--terracotta-light);
+}
+.card{
+    box-shadow: 2px 1px 15px var(--terracotta);
+}
+.card-body{
+    text-align: center;
+    padding: 20px;
+}
+.card-text{
+    font-size: 14px;
+}
+.card-title{
+    margin-top: 0;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-size: 20px;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus, .btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus{
+    outline: unset;
+    border: 0;
+    border-color: unset;
+    box-shadow: unset;
+}
+@media(max-width:767px){
+    .card-sections{
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 20px;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+    .card {
+        width: 280px!important;
+    }
+    header{
+        padding-bottom: 10px;
+    }
+}

@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras geométricas | Curso práctico sobre JS</title>
 
-    <link rel="stylesheet" href="./figures.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/figures.css">
 </head>
 <body>
     <header>
+        <a href="index.html" class="backward"><i class="fa-solid fa-backward"></i></a>
         <h1>Figuras geométricas</h1>
         <span>Primer taller del curso práctico de js</span>
     </header>
     <div class="container-figures">
         <section class="square">
+            
             <h2>Cuadrado</h2>
             <form action="">
                 <div class="sectionLI">
@@ -23,25 +27,13 @@
                 </div>
                 
                 <div class="section-buttons">
-                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterSquare()">Calcular perímetro</button>
-                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaSquare()">Calcular área</button>
+                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterSquare()">perímetro</button>
+                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaSquare()">área</button>
                 </div>
             </form>
            
         </section>
-        <section class="circle">
-            <h2>Círculo</h2>
-            <form action="">
-                <div class="sectionLI">
-                    <label for="">Cuánto mide el radio del Círculo?</label>
-                    <input type="number" id="inputRadiusCircle">
-                </div>
-                <div class="section-buttons">
-                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterCircle()">Calcular perímetro</button>
-                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaCircle()">Calcular área</button>
-                </div>
-            </form>
-        </section>
+       
         <section class="triangle">
             <h2>Triángulo</h2>
             <form action="">
@@ -63,8 +55,8 @@
                 </div>
                 
                 <div class="section-buttons">
-                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterTriangle()">Calcular perímetro</button>
-                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaTriangle()">Calcular área</button>
+                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterTriangle()">perímetro</button>
+                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaTriangle()">área</button>
                 </div>
             </form>
         </section>
@@ -85,13 +77,27 @@
                     <input type="number" id="inputBaseTriangleIsos">
                 </div>
                 <div class="section-buttons">
-                    <button class="button" type="button" id="buttonArea" onclick="calculateHeightTriangle()">Calcular Altura</button>
+                    <button class="button" type="button" id="buttonArea" onclick="calculateHeightTriangle()">Altura</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="circle">
+            <h2>Círculo</h2>
+            <form action="">
+                <div class="sectionLI">
+                    <label for="">Cuánto mide el radio del Círculo?</label>
+                    <input type="number" id="inputRadiusCircle">
+                </div>
+                <div class="section-buttons">
+                    <button class="button" type="button" id="buttonPerimeter" onclick="calculatePerimeterCircle()">perímetro</button>
+                    <button class="button" type="button" id="buttonArea" onclick="calculateAreaCircle()">área</button>
                 </div>
             </form>
         </section>
     </div>
     
 
-    <script src="./figures.js"></script>
+    <script src="js/figures.js"></script>
 </body>
 </html>
