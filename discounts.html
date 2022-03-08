@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios y descuentos | Curso práctico de JS</title>
+    <link rel="stylesheet" href="discounts.css">
+</head>
+<body>
+    
+    <main>
+        <section class="title">
+            <h1>Porcentajes y descuentos</h1>
+        </section>
+        <section class="options-discounts">
+            <div class="price-discounts">
+                <h2>Calcular el precio a pagar por tu producto con el descuento</h2>
+                <form action="">
+                    <div class="section-input">
+                        <label for="">Cuál es el precio del producto sin descuento: </label>
+                        <input type="number" name="" id="inputPrice">
+                    </div>
+                    <div class="section-input">
+                        <label for="">Cuál es el descuento del producto: </label>
+                        <input type="number" name="" id="inputDiscount">
+                    </div>
+                    <div class="buttons">
+                        <button type="button" onclick="calculatePriceDiscount()">Calcular precio</button>
+                    </div>
+                </form>
+                <p id="resultsPrice"></p>
+            </div>
+
+            <div class="price-discounts coupon-section">
+                <h2>Calcular el precio a pagar por tu producto con el descuento por cupón</h2>
+                <form action="">
+                    <div class="section-input">
+                        <label for="">Cuál es el precio del producto sin descuento: </label>
+                        <input type="number" name="" id="inputPrice2">
+                    </div>
+                    <div class="section-input">
+                        <label for=""> Ingresar código del cupón</label>
+                       
+                        <input type="text" name="" id="inputCodeCoupon">
+                    </div>
+                
+                    <div class="buttons">
+                        <button type="button" onclick="calculatePriceDiscountCoupon()">Calcular precio</button>
+                    </div>
+                </form>
+                <p id="resultsPriceCoupon"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="discounts.js"></script>
+</body>
+</html>

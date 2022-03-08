@@ -6,3 +6,11 @@
 - Second: Implement the formulas in JavaScript
 - Third step: Create functions
 - Fourth step: Integrate JavaScript with HTML
+
+
+## Workshop #2: Prices and discounts
+
+- First step: Define the formulas
+- Second: Implement the formulas in JavaScript
+- Third step: Create functions
+- Fourth step: Integrate JavaScript with HTML
